@@ -5,7 +5,7 @@
  * Copyright 2020 shpontex
  * Released under the MIT license
  *
- * Date: 2020-03-02T12:55:13.295Z
+ * Date: 2020-08-21T14:55:42.876Z
  */
 
 (function (global, factory) {
@@ -1045,7 +1045,6 @@
         var _this = this;
 
         window.onresize = this.resize.bind(this);
-        this.properties.image.src = obj.url;
         var properties = this.properties;
         var options = this.options;
         var self = this;
@@ -1105,6 +1104,9 @@
             setRotationOrigin.call(self);
             resolve(self.properties.image);
           };
+
+          properties.image.src = null;
+          properties.image.src = obj.url;
         });
       }
     }, {
